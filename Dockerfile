@@ -13,6 +13,22 @@ RUN apk add git curl wget bash
 RUN apk add g++ gcc libxslt-dev
 RUN apk add postgresql-libs postgresql-dev
 
+# Add other packages for dev
+RUN apk add tar \
+    libffi-dev \
+    jpeg-dev \
+    zlib-dev \
+    coreutils \
+    nodejs \
+    npm \
+    openjdk7-jre \
+    geos \
+    gdal \
+    geos-dev \
+    gdal-dev \
+    tzdata
+
+
 RUN apk add --no-cache zlib-dev freetype-dev 
 RUN apk add --no-cache lcms2-dev openjpeg-dev
 RUN apk add --no-cache tk-dev harfbuzz-dev fribidi-dev
